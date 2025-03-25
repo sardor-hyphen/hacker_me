@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerTyper Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div id="code-container"></div>
+        <div id="cursor"></div>
+    </div>
+    
+    <div id="attack-modal" class="modal">
+        <div class="modal-content">
+            <h2>ATTACK IN PROGRESS</h2>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+                <div id="progress-text">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Success Screen -->
+    <div id="success-screen" class="fullscreen-overlay">
+        <div class="success-header">
+            <h1>ACCESS GRANTED</h1>
+            <div class="controls">
+                <button id="close-success">X</button>
+            </div>
+        </div>
+        
+        <div class="data-container">
+            <div class="data-panel">
+                <h3>USER ACCOUNTS</h3>
+                <div class="data-table" id="users-table"></div>
+            </div>
+            
+            <div class="data-panel">
+                <h3>SERVER ACCESS</h3>
+                <div class="data-table" id="servers-table"></div>
+            </div>
+            
+            <div class="data-panel wide-panel">
+                <h3>NETWORK MAP</h3>
+                <div id="network-map"></div>
+            </div>
+            
+            <div class="data-panel">
+                <h3>SYSTEM LOG</h3>
+                <div id="system-logs"></div>
+            </div>
+            
+            <div class="data-panel">
+                <h3>COMMANDS</h3>
+                <div class="command-input">
+                    <span class="prompt">$</span>
+                    <input type="text" id="command-input" placeholder="Enter command...">
+                </div>
+                <div id="command-output"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hacker News Popup -->
+    <div id="news-modal" class="modal hacker-news-modal">
+        <div class="modal-content news-content">
+            <div class="news-header">
+                <h2>[ SECURITY INTEL FEED ]</h2>
+                <button id="close-news">×</button>
+            </div>
+            <div class="news-container">
+                <div class="news-loading">
+                    <div class="terminal-line">Accessing darknet feeds...</div>
+                    <div class="terminal-line">Bypassing security protocols...</div>
+                    <div class="terminal-line">Decrypting data streams...</div>
+                </div>
+                <div id="news-feed"></div>
+            </div>
+            <div class="news-footer">
+                <div class="status-line">STATUS: ENCRYPTED CONNECTION ESTABLISHED</div>
+                <div class="status-line">SOURCE: UNDERGROUND INTELLIGENCE NETWORK</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html> 
